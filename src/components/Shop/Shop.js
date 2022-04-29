@@ -26,14 +26,14 @@ const Shop = () => {
         // cart.push(product)
         const newCart = [...cart, product];
         setCart(newCart);
-        addToDb(product.id)
+        addToDb(product._id)
 
     }
     return (
         <div className='shop-container'>
             <div className="products-container">
                 {
-                    products.map(product => <Product key={product.id} product={product}
+                    products.map(product => <Product key={product._id} product={product}
                         handleAddToCart={handleAddToCart}  > </Product>)
                 }
             </div>
